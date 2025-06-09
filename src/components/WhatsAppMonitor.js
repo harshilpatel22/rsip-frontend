@@ -10,7 +10,7 @@ import {
   Clock,
   AlertCircle
 } from 'lucide-react';
-import QRCode from 'qrcode.react';
+import {QRCode }from 'qrcode.react';
 import apiService, { wsService } from '../services/api';
 
 export const WhatsAppMonitor = () => {
@@ -275,3 +275,5 @@ export const WhatsAppMonitor = () => {
     </div>
   );
 };
+
+export default WhatsAppMonitor;
