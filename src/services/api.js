@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3001';
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:3000';
 
 class ApiService {
   constructor() {
@@ -129,9 +129,6 @@ class ApiService {
   }
 
   // Health check
-  async healthCheck() {
-    return this.request('/api/health');
-  }
 
   // Export functionality
   async exportIssues(filters = {}, format = 'csv') {
@@ -171,7 +168,7 @@ class WebSocketService {
   }
 
   connect() {
-    const wsURL = process.env.REACT_APP_WS_URL || 'ws://localhost:8080';
+    const wsURL = process.env.REACT_APP_WS_URL || 'ws://localhost:3000/ws';
     
     try {
       this.ws = new WebSocket(wsURL);
